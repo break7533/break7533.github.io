@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Quattrocento");
+/* Parallax base styles
+  --------------------------------------------- */
+
+.parallax {
+	height: 500px;
+	/* fallback for older browsers */
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-perspective: 300px;
+	-webkit-overflow-scrolling: touch;
+	perspective: 300px;
+}
+
+.parallax__group {
+	position: relative;
+	height: 500px;
+	/* fallback for older browsers */
+	min-height: 100vh;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.parallax__layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.parallax__layer--fore {
+	-webkit-transform: translateZ(90px) scale(.7);
+	transform: translateZ(90px) scale(.7);
+	z-index: 1;
+}
+
+.parallax__layer--base {
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	z-index: 4;
+}
+
+.parallax__layer--back {
+	-webkit-transform: translateZ(-300px) scale(2);
+	transform: translateZ(-300px) scale(2);
+	z-index: 3;
+}
+
+.parallax__layer--deep {
+	-webkit-transform: translateZ(-600px) scale(3);
+	transform: translateZ(-600px) scale(3);
+	z-index: 2;
+}
+
+.parallax__group {
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+/* demo styles
+  --------------------------------------------- */
+
+body, html {
+	overflow: hidden;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+hr {
+	color: #4b4a4a;
+}
+
+@media (max-width: 768px) {
+	.navbar-fixed-top .navbar-collapse.collapse.in ul {
+		width: 25%;
+	}
+}
+
+body {
+	font-family: "Quattrocento", Helvetica, Arial, sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.parallax {
+	font-size: 200%;
+}
+/* centre the content in the parallax layers */
+
+.title {
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.left-side {
+	padding-top: 5%;
+	padding-left: 2%;
+	text-align: center;
+}
+
+.right-side {
+	padding-top: 5%;
+	padding-left: 2%;
+	text-align: center;
+}
+
+.wrapper {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.wrapper div {
+	display: table-cell;
+}
+
+.description {
+	padding-top: 5%;
+	font-size: 18px;
+	text-align: center;
+}
+
+.top-title {
+	text-align: center;
+}
+
+.techList {
+	padding-top: 1%;
+	text-align: center;
+	width: 50%;
+	float: left;
+	margin-bottom: -1px;
+	font-weight: bold;
+}
+
+.techUL {
+	padding-top: 5%;
+	list-style-type: none;
+}
+
+.port {
+	padding-top: 3%;
+	padding-bottom:1%;
+}
+
+.portBlock {
+  margin: 0 0 10px;
+  right: 0;
+  border: rgba(255, 255, 255, 0.6);
+}
+
+.portLink {
+  display: block;
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.portCaption {
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0, 0.8);
+  text-align: center;
+  padding: 15px;
+}
+
+.portCaption h4 {
+  color: #fff;
+  text-transform: none;
+  margin: 0;
+}
+
+.portCaption p {
+  font-style: italic;
+  font-size: 13px;
+  margin: 0;
+}
+
+.icons{
+	padding-top:15%;
+}
+
+
+.footer{	
+	color:#3d3c5;
+}
+
+.link{
+	color: #4782EF;
+}
+
+.link:hover {
+	color: #3d3c56;
+}
+
+.icon {
+	color:black;
+	padding-right:3%;
+}
+
+
+#scrollIcon, #scrollTopIcon {
+	margin-top: 25vh;
+	padding: 10px;
+	font-size: 1.5em;
+	color: #dfe0e5;
+	border: solid 2px #dfe0e5;
+	border-radius: 50%;
+}
+
+#scrollTopIcon {
+	margin-top: 10px;
+	font-size: 1em;
+	color: #4b4a4a;
+	border-color: #4b4a4a;
+}
+/* style the groups
+  --------------------------------------------- */
+
+#group1 {
+	z-index: 5;
+	/* slide over group 2 */
+}
+
+#group1 .parallax__layer--base {
+	background-image: url("https://source.unsplash.com/v4rLEeIaoBo");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#group2 {
+	z-index: 3;
+	/* slide under groups 1 and 3 */
+}
+
+#group2 .parallax__layer--base {
+	padding: 5%;
+}
+
+#group2 .parallax__layer--back {
+	background-image: url("https://source.unsplash.com/M2oJ7Uq_0rc");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+#group3 {
+	z-index: 4;
+	/* slide over group 2 and 4 */
+}
+
+#group3 .parallax__layer--base {
+	background-image: url("https://source.unsplash.com/p5mVS49hrzU");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	 
+}
+
+#group3 .parallax__layer--fore {
+}
+
+#group4 {
+	z-index: 3;
+	/* slide under group 3 and 5 */
+}
+
+#group4 .parallax__layer--base {
+	background-image: url("https://source.unsplash.com/LbMy35NyCNg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+/* NavBar */
+.navbar {
+	height: 70px;
+	background-color: transparent;
+	background: transparent;
+	border: none;
+	z-index: 100;
+	margin-bottom: 0;
+	border-radius: 0;
+	transition: background-color 1s ease 0s;
+}
+
+.navbar-brand {
+	margin-top: 10px;
+	color: #4b4a4a;
+	font-weight: 400;
+}
+.navbar-brand:hover {
+	color: #3d3c56;
+}
+
+#myNavbar {
+	margin-right: 25px;
+}
+
+#myNavbar .navbar-nav > li > a {
+	color: #4b4a4a;
+	font-weight: 200;
+	text-transform: lowercase;
+	margin: 10px 5px 5px 5px;
+	border-radius: 5px;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#myNavbar .navbar-nav > li > a:hover,
+#myNavbar .navbar-nav > li > a:active,
+#myNavbar .navbar-nav > li > a:focus {
+	color: #4b4a4a;
+	border: 1px solid #4b4a4a;
+	background-color: transparent;
+}
+
+#myNavbar .navbar-nav > li > a:visited {
+	color: #4b4a4a;
+	text-decoration: none;
+}
+
+#myNavbar .navbar-nav > .active > a,
+#myNavbar .navbar-nav > .active > a:hover,
+#myNavbar .navbar-nav > .active > a:focus {
+	background-color: transparent;
+	color: #4b4a4a;
+}
+
+.navbar-fixed-top .navbar-toggle {
+	margin-right: 25px;
+	border-color: #4b4a4a;
+}
+
+.navbar-fixed-top .navbar-toggle:hover, .navbar-fixed-top .navbar-toggle:focus {
+	background-color: transparent;
+	color: #4b4a4a;
+}
+
+.navbar-fixed-top .navbar-toggle .icon-bar {
+	color: #4b4a4a;
+	background-color: #4b4a4a;
+}
+
+.navbar-fixed-top .navbar-collapse.collapse.in ul {
+	background-color: transparent;
+}
