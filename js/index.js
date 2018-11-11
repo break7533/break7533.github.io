@@ -1,8 +1,5 @@
 document.addEventListener('mousewheel', function(e) { 
-    if (e.axis == e.HORIZONTAL_AXIS) {
-        e.stopPropagation(); 
-        e.preventDefault();
-        e.cancelBubble = false; 
+    console.log(e);
     }
     return false;
 }, false); 
