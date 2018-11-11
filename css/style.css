@@ -16,7 +16,7 @@ body, html {
 	-webkit-perspective: 300px;
 	-webkit-overflow-scrolling: touch;
 	perspective: 300px;
-	max-width: 100%;
+	max-width: 100% !important;
 }
 
 .parallax__group {
