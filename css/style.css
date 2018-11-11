@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Quattrocento");
 /* Parallax base styles
   --------------------------------------------- */
+body, html {
+	overflow: hidden;
+	max-width:100%;
+	overflow-x: hidden !important;
+}
 
 .parallax {
 	height: 500px;
@@ -61,11 +66,7 @@
 /* demo styles
   --------------------------------------------- */
 
-body, html {
-	overflow: hidden;
-	max-width:100%;
-	overflow-x: hidden;
-}
+
 
 hr {
 	color: #4b4a4a;
