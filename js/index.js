@@ -1,4 +1,4 @@
-document.addEventListener('DOMMouseScroll', function(e) { 
+document.addEventListener('mousewheel', function(e) { 
     if (e.axis == e.HORIZONTAL_AXIS) {
         e.stopPropagation(); 
         e.preventDefault();
