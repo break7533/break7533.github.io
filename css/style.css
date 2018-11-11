@@ -10,12 +10,13 @@ body, html {
 .parallax {
 	height: 500px;
 	/* fallback for older browsers */
-	min-height: 100vh;
+	min-height: 100%;
 	overflow-x: hidden;
 	overflow-y: auto;
 	-webkit-perspective: 300px;
 	-webkit-overflow-scrolling: touch;
 	perspective: 300px;
+	max-width: 100%;
 }
 
 .parallax__group {
