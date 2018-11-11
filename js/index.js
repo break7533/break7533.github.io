@@ -1,4 +1,4 @@
-document.addEventListener('scroll', function(e) { 
+document.addEventListener('wheel', function(e) { 
  console.log(e);
     return false;
 }, false); 
