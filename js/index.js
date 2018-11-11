@@ -1,8 +1,3 @@
-document.addEventListener('wheel', function(e) { 
- console.log(e);
-    return false;
-}, false); 
-
 $(function(){ 
      var navMain = $(".navbar-collapse"); // avoid dependency on #id
      // "a:not([data-toggle])" - to avoid issues caused
